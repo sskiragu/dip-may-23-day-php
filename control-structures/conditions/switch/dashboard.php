@@ -41,7 +41,8 @@
         <main>
             <div>
                 <?php
-                  $selected_option = $_GET['id'];
+                  if(isset($_GET['id'])){
+                    $selected_option = $_GET['id'];
 
                   switch ($selected_option) {
                     case 'users':
@@ -76,6 +77,7 @@
                     default:
                         echo "404 - Page not found";
                         break;
+                  }
                   }
                 ?>
             </div>
