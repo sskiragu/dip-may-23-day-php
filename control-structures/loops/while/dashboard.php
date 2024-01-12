@@ -52,7 +52,7 @@
                         echo "Roles";
                     break;
                     case 'products':
-                        echo "Products";
+                        include_once 'products.php';
                     break;
                     case 'logout':
                         echo "Logout";
