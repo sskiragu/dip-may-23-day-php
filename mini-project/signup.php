@@ -7,6 +7,7 @@
 </head>
 <body>
     <div class="container">
+        <?php include_once('navbar.php'); ?>
         <form action="signup.php" method="POST">
             <div class="form-input">
                 <input type="text" name="username" placeholder="Enter username">
