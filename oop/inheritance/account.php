@@ -22,8 +22,15 @@ class SavingAccount extends Account{
 }
 
 class FixedAccount extends Account{
-    public $interest = '1.5';
+    public $interest_rate;
+    public function __construct($account_no, $account_name, $interest_rate )
+    {
+        parent::__construct($account_no, $account_name);
+        $this->interest_rate = $interest_rate;
+    }
+
+    
 }
 
-$fixed_account = new FixedAccount(23456789098765, "John Doe");
+$fixed_account = new FixedAccount(23456789098765, "John Doe", 1.5);
 $fixed_account->print_account_info();
